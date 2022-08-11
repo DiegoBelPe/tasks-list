@@ -20,7 +20,7 @@ export function App({title}: Props) {
     completed: false
   }]);
   return (
-    <div className="App">
+    <div className="bg-dark">
       <h1>{title}</h1>
       {tasks.map(task => (
         <div>{task.title}</div>
