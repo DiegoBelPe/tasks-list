@@ -1,5 +1,6 @@
 import { useState } from "react";
 import './App.css';
+import logo from './logo.svg';
 
 interface Props {
   title: string;
@@ -20,7 +21,16 @@ export function App({title}: Props) {
     completed: false
   }]);
   return (
-    <div className="bg-dark">
+    <div className="bg-dark" style={{height: '100vh'}}>
+      <nav className=" navbar navbar-dark bg-primary">
+        <div className="container">
+          <a href="/">
+            <img src={logo} alt="react-logo" />
+            {title}
+          </a>
+        </div>
+
+      </nav>
       <h1>{title}</h1>
       {tasks.map(task => (
         <div>{task.title}</div>
